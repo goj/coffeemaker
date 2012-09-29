@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/sh
 
 LOCALPATH=${REQUEST_URI##${SCRIPT_NAME}/}
 COMMAND=${LOCALPATH%/}
@@ -6,13 +6,13 @@ COMMAND=${LOCALPATH%/}
 
 case $COMMAND in
   on|off|status|debug)
-    echo "HTTP/1.1 200 OK"
+    echo "Status: 200 OK"
     echo "Content-Type: text/plain"
     echo
-    /usr/bin/coffee-control $COMMAND
+    coffee-control $COMMAND
     ;;
   *)
-    echo "HTTP/1.1 400 Bad Request"
+    echo "Status: 400 Bad Request"
     echo "Content-Type: text/plain"
     echo
     echo "Bad request, change your URL"
