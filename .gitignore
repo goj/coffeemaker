@@ -1,5 +1,6 @@
 /atmega/main.elf
 /atmega/main.hex
 /cli/coffee-control
+/cli/mock-coffee-control
 /android/.metadata
 *.o

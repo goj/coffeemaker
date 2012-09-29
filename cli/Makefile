@@ -17,25 +17,23 @@ USBLIBS = `libusb-config --libs`
 
 NAME = coffee-control
 
-OBJECTS = opendevice.o coffeemaker.o $(NAME).o
+STD_OBJECTS = opendevice.o coffeemaker.o coffee-control.o
+MOCK_OBJECTS = opendevice.o coffeemaker-mock.o coffee-control.o
 
 CC		= gcc
 CFLAGS	= $(CPPFLAGS) $(USBFLAGS) -O -g -Wall
 LIBS	= $(USBLIBS)
 
-PROGRAM = $(NAME)
-
-
-all: $(PROGRAM)
+all: coffee-control mock-coffee-control
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<
 
-$(PROGRAM): $(OBJECTS)
-	$(CC) -o $(PROGRAM) $(OBJECTS) $(LIBS)
+coffee-control: $(STD_OBJECTS)
+	$(CC) -o $@ $(STD_OBJECTS) $(LIBS)
 
-strip: $(PROGRAM)
-	strip $(PROGRAM)
+mock-coffee-control: $(MOCK_OBJECTS)
+	$(CC) -o $@ $(MOCK_OBJECTS) $(LIBS)
 
 clean:
 	rm -f *.o $(PROGRAM)

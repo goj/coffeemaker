@@ -70,14 +70,15 @@ time_t coffeemaker_status(usb_dev_handle* handle) {
     return ts;
 }
 
-void coffeemaker_on(usb_dev_handle* handle) {
+time_t coffeemaker_on(usb_dev_handle* handle) {
     char buffer[4];
-    int ts = time(NULL);
+    time_t ts = time(NULL);
     buffer[0] = 0xFF & (ts >> 24);
     buffer[1] = 0xFF & (ts >> 16);
     buffer[2] = 0xFF & (ts >> 8);
     buffer[3] = 0xFF & ts;
     out_request(handle, REQ_COFFEE_ON, 0, buffer, 4);
+    return ts;
 }
 
 void coffeemaker_off(usb_dev_handle* handle) {
@@ -89,10 +90,9 @@ void coffeemaker_disconnect(usb_dev_handle* handle) {
     usb_close(handle);
 }
 
-void coffeemaker_debug(usb_dev_handle* handle) {
-    char buffer[256];
-    in_request(handle, REQ_DEBUG, 0, buffer, sizeof(buffer));
-    puts(buffer);
+void coffeemaker_debug(usb_dev_handle* handle, char* buffer, int buf_size) {
+    in_request(handle, REQ_DEBUG, 0, buffer, buf_size);
+    buffer[buf_size-1] = '\0';
 }
 
 static int usb_request(usb_dev_handle *dev, int request, int dir, int value, char *bytes, int size)
