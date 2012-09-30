@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Coffee Controller</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Coffee Maker Remote</string>
+    <string name="no_status">No status yet…</string>
+    <string name="on_button">ON</string>
+    <string name="status_button">Status</string>
+    <string name="off_button">OFF</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="url_template">URL template</string>
+
+</resources>

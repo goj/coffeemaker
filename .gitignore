@@ -3,4 +3,7 @@
 /cli/coffee-control
 /cli/mock-coffee-control
 /android/.metadata
+/android/CoffeeControl/bin
+/android/CoffeeControl/gen
 *.o
+/SECRET

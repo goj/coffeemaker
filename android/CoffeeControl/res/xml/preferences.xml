@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/title_activity_preferences">
+        <EditTextPreference android:title="@string/url_template"
+            				android:key="url_template"
+            				android:defaultValue="http://coffee-router/cgi-bin/coffee/%s"/>
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>
