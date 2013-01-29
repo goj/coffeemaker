@@ -56,11 +56,10 @@ usb_dev_handle* coffeemaker_connect() {
 }
 
 time_t coffeemaker_status(usb_dev_handle* handle) {
-    char buffer[32];
-    int cnt = in_request(handle, REQ_GET_STATUS, 0, buffer, sizeof(buffer));
+    unsigned char buffer[32];
+    int cnt = in_request(handle, REQ_GET_STATUS, 0, (char*)buffer, sizeof(buffer));
     if (cnt != 4) {
         return -cnt;
-
     }
     time_t ts = 0;
     ts |= buffer[0] << 24;
