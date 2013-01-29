@@ -29,4 +29,4 @@ The circuit is based on [USB-Servo by Ronald Schaten](http://www.schatenseite.de
 WARNING
 =======
 
-Nobody said dicking around with electric devices is a good idea. Contrary, it's probably a bad one. I TAKE NO RESPONSIBILITY WHATSOEVER FOR ANY DEATHS, INJURIES, FIRES, PROPERTY DAMAGES, LOST WARRANTIES, DATA LOSS, CAFFEINE OVERDOSE AND ANY OTHER CONSEQUENCES OF ANYONE (YES, THIS INCLUDES YOU) MAKING ANY USE OF STUFF INCLUDED IN HERE. It's your risk.
+Nobody said dicking around with electric devices is a good idea. Contrary, it's probably a bad one. I TAKE NO RESPONSIBILITY WHATSOEVER FOR ANY DEATHS, INJURIES, FIRES, PROPERTY DAMAGES, LOST WARRANTIES, DATA LOSS, CAFFEINE OVERDOSE OR ANY OTHER CONSEQUENCES OF ANYONE (YES, THIS INCLUDES YOU) MAKING ANY USE OF STUFF INCLUDED IN HERE. It's your risk.
