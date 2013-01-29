@@ -2,6 +2,7 @@
 /atmega/main.hex
 /cli/coffee-control
 /cli/mock-coffee-control
+/cli/mips-coffee-control
 /android/.metadata
 /android/CoffeeControl/bin
 /android/CoffeeControl/gen

@@ -1,0 +1,4 @@
+#!/bin/sh
+export PATH=/opt/openwrt-buildroot/staging_dir/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/bin:$PATH
+export STAGING_DIR=/opt/openwrt-buildroot/staging_dir/target-mips_r2_uClibc-0.9.33.2
+mips-openwrt-linux-gcc coffee-control.c coffeemaker.c opendevice.c -lusb -static -o mips-coffee-control
